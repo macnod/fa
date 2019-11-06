@@ -10,7 +10,7 @@ Write a command line program in the language of your choice that will take opera
   * Operands and operators shall be separated by one or more spaces.
   * Mixed numbers will be represented by whole_numerator/denominator. e.g. "3_1/4"
   * Improper fractions and whole numbers are also allowed as operands
-** Example 1:
+** Example 1
 #+begin_example
 ? 1/2 * 3_3/4
 = 1_7/8
