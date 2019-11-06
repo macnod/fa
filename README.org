@@ -47,7 +47,7 @@ Here are some more examples (results in commented lines):
 * Implementation
 I've impleted the solution in Python 3.
 
-The /ASList/ class implements all of the functionality needed to solve the problem.  You create an /ASList/ object using a string representing the expression that you want to evaluate.  The /ASList/ object checks the syntax of the expression and raises an exception if the object finds syntax errors.
+The /ASList/ class implements all of the functionality needed to solve the problem.  You create an /ASList/ object using a string representing the expression that you want to evaluate.  The /ASList/ object checks the syntax of the expression and raises an exception if the object finds syntax errors.  The exception includes a clear description of the specific syntax error.
 
 Here's an example of how to create and use an /ASList/ object:
 #+begin_src python
