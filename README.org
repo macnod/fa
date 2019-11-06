@@ -22,6 +22,24 @@ Write a command line program in the language of your choice that will take opera
 #+end_example
 * Interpretation
 I've interpreted the problem description not so much as a specification, but rather as a set of constraints on expected functionality. Therefore, because the problem description doesn't address negative numbers or provide a limit to the number of operators and operands that can form an expression, I've included support for both negative numbers and for unlimited operators and operands.  Similarly, given that the description contains no mention of operator precedence, I've incorporated operator precedence according to the standard rules of mathematics.
+
+I've impleted the solution ijn Python 3.
+
+The ASList class implements all of the functionality needed to solve the problem.  You create an ASList object using a string representing the expression that you want to evaluate.  The ASList object checks the syntax of the expression and raises an exception if the object finds syntax errors.
+
+Here's an example of how to create and use an ASList object:
+#+begin_src python
+try:
+    # Parse the expression
+    asl = ASList('1_1/2 * 2')
+except ValueError as e:
+    print("Error: {}".format(str(e)))
+    exit(1)
+
+# Evaluate the expression and print the result
+print(asl.compute())
+#+end_src
+
 * Running the Example
 To run the example, copy the project to your computer, change into the projects directory, and run the program FractionalArithmetic with a single string representing the expression that you want to evaluate.  Here's an example of how to do all of that:
 #+begin_src sh
