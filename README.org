@@ -23,31 +23,15 @@ Write a command line program in the language of your choice that will take opera
 * Interpretation
 I've interpreted the problem description not so much as a specification, but rather as a set of constraints on expected functionality. Therefore, because the problem description doesn't address negative numbers or provide a limit to the number of operators and operands that can form an expression, I've included support for both negative numbers and for unlimited operators and operands.  Similarly, given that the description contains no mention of operator precedence, I've incorporated operator precedence according to the standard rules of mathematics.
 
-I've impleted the solution ijn Python 3.
-
-The ASList class implements all of the functionality needed to solve the problem.  You create an ASList object using a string representing the expression that you want to evaluate.  The ASList object checks the syntax of the expression and raises an exception if the object finds syntax errors.
-
-Here's an example of how to create and use an ASList object:
-#+begin_src python
-try:
-    # Parse the expression
-    asl = ASList('1_1/2 * 2')
-except ValueError as e:
-    print("Error: {}".format(str(e)))
-    exit(1)
-
-# Evaluate the expression and print the result
-print(asl.compute())
-#+end_src
-
+I've also included code to check the syntax of the expression that you want to evaluate.
 * Running the Example
-To run the example, copy the project to your computer, change into the projects directory, and run the program FractionalArithmetic with a single string representing the expression that you want to evaluate.  Here's an example of how to do all of that:
+To run the example, copy the project to your computer, change into the projects directory, and run the program /FractionalArithmetic.py/ with a single string representing the expression that you want to evaluate.  Here's an example of how to do all of that:
 #+begin_src sh
 git clone git@github.com:macnod/fa.git
 cd fa
 ./FractionsArithmetic.py '10_3/2 - 1/2 * 3 - 4_1/4'
 #+end_src
-The above FractionsArithmetic.py command should give you the following result: '5_3/4'
+The above /FractionsArithmetic.py/ command should give you the following result: '5_3/4'
 
 Here are some more examples (results in commented lines):
 #+begin_src sh
@@ -61,11 +45,28 @@ Here are some more examples (results in commented lines):
 # 50_1/2
 #+end_src
 * Implementation
+I've impleted the solution in Python 3.
+
+The /ASList/ class implements all of the functionality needed to solve the problem.  You create an /ASList/ object using a string representing the expression that you want to evaluate.  The /ASList/ object checks the syntax of the expression and raises an exception if the object finds syntax errors.
+
+Here's an example of how to create and use an /ASList/ object:
+#+begin_src python
+try:
+    # Parse the expression
+    asl = ASList('1_1/2 * 2')
+except ValueError as e:
+    print("Error: {}".format(str(e)))
+    exit(1)
+
+# Evaluate the expression and print the result
+print(asl.compute())
+#+end_src
+
 I've implemented most of the functionality of the program using a doubly-linked list.  This allows me to easily obtain the values for an operator (previous node and next node) and to remove the associated nodes when I've computed the result.  Removing a node of a doubly-linked list is an O(1) operation, so the program progresses efficiently computing subexpressions in the list.
 
 The program is implemented as a Python module that can be easily imported, but can run as a stand-alone command-line utility as well.
 
-For an example of how to import the module and use it in another program, see the FractionsArithmeticTests.py code.
+For an example of how to import the module and use it in another program, see the code in /FractionsArithmeticTests.py/.
 * Tests
 I've included tests with this implementation.  You can run them by changing to the project's directory and typing the following command:
 #+begin_src sh
