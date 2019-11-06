@@ -1,5 +1,5 @@
 #+title: OneLogin Coding Challenge
-#+title: Fraction Arithmetic
+#+title: Fractions Arithmetic
 #+author: Donnie Cameron
 #+email: root@sinistercode.com
 
