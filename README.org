@@ -43,7 +43,7 @@ print(asl.compute())
 * Running the Example
 To run the example, copy the project to your computer, change into the projects directory, and run the program FractionalArithmetic with a single string representing the expression that you want to evaluate.  Here's an example of how to do all of that:
 #+begin_src sh
-git clone fa
+git clone git@github.com:macnod/fa.git
 cd fa
 ./FractionsArithmetic.py '10_3/2 - 1/2 * 3 - 4_1/4'
 #+end_src
@@ -69,5 +69,5 @@ For an example of how to import the module and use it in another program, see th
 * Tests
 I've included tests with this implementation.  You can run them by changing to the project's directory and typing the following command:
 #+begin_src sh
-./FractionArithmeticTests.py
+./FractionArithmeticTests.py -v
 #+end_src
