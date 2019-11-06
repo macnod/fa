@@ -45,7 +45,7 @@ Here are some more examples (results in commented lines):
 # 50_1/2
 #+end_src
 * Implementation
-I've impleted the solution in Python 3.
+I've implemented the solution in Python 3.
 
 The /ASList/ class implements all of the functionality needed to solve the problem.  You create an /ASList/ object using a string representing the expression that you want to evaluate.  The /ASList/ object checks the syntax of the expression and raises an exception if the object finds syntax errors.  The exception includes a clear description of the specific syntax error.
 
@@ -62,7 +62,7 @@ except ValueError as e:
 print(asl.compute())
 #+end_src
 
-I've implemented most of the functionality of the program using a doubly-linked list.  This allows me to easily obtain the values for an operator (previous node and next node) and to remove the associated nodes when I've computed the result.  Removing a node of a doubly-linked list is an O(1) operation, so the program progresses efficiently computing subexpressions in the list.
+I've implemented most of the functionality of the program using a doubly-linked list.  This allows me to easily obtain the values for an operator (previous node and next node) and to remove the associated nodes when I've computed the result.  Removing a node of a doubly-linked list is an O(1) operation, so the program progresses efficiently computing sub-expressions in the list.
 
 The program is implemented as a Python module that can be easily imported, but can run as a stand-alone command-line utility as well.
 
