@@ -25,7 +25,7 @@ I've interpreted the problem description not so much as a specification, but rat
 
 I've also included code to check the syntax of the expression that you want to evaluate.
 * Running the Example
-To run the example, copy the project to your computer, change into the projects directory, and run the program /FractionalArithmetic.py/ with a single string representing the expression that you want to evaluate.  Here's an example of how to do all of that:
+To run the example, copy the project to your computer, change into the project's directory, and run the program /FractionalArithmetic.py/ with a single string representing the expression that you want to evaluate.  Here's an example of how to do all of that:
 #+begin_src sh
 git clone git@github.com:macnod/fa.git
 cd fa

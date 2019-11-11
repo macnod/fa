@@ -75,9 +75,9 @@ Table of Contents
 ═════════════════════
 
   To run the example, copy the project to your computer, change into the
-  projects directory, and run the program /FractionalArithmetic.py/ with
-  a single string representing the expression that you want to evaluate.
-  Here's an example of how to do all of that:
+  project's directory, and run the program /FractionalArithmetic.py/
+  with a single string representing the expression that you want to
+  evaluate.  Here's an example of how to do all of that:
   ┌────
   │ git clone git@github.com:macnod/fa.git
   │ cd fa
